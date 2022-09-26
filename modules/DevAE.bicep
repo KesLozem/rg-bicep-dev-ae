@@ -60,6 +60,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   }
   kind: 'StorageV2'
   properties: {
+    allowBlobPublicAccess: false //MUST BE FALSE
     accessTier: 'Hot'
     networkAcls: {
       defaultAction: 'Deny'
@@ -104,7 +105,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' = {
       }
     ]
     networkAcls: {
-      defaultAction: 'Allow'
+      defaultAction: 'Deny' // MUST BE DENY
       bypass: 'AzureServices'
       virtualNetworkRules: [
         {

@@ -2,7 +2,7 @@
 targetScope = 'subscription'
 
 //params
-param rgBicepDevAEName string = 'rg-bicep-dev-ae'
+param rgBicepDevAEName string = 'rg-bicep-dev-ae-lkosem'
 param location string = 'australiasoutheast'
 
 param vnetName string = 'vnet-bicep-dev-ae'
